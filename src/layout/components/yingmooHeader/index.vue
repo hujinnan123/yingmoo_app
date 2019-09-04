@@ -1,11 +1,12 @@
 <template>
-    <div class="header-container">
-        <Address/>
+    <div class="header-container display_flex justify-content_flex-justify align-items_center">
+        <Address />
+        <YingmooSearch />
+        <Login />
     </div>
 </template>
 
 <script>
-import { Icon } from 'vant';
 import Address from './Address'
 import YingmooSearch from './YingmooSearch'
 import Login from './Login'
@@ -14,7 +15,6 @@ export default {
         Address,
         YingmooSearch,
         Login,
-        Icon
     }
 }
 </script>

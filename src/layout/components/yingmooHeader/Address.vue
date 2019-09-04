@@ -1,6 +1,5 @@
 <template>
     <div class="yingmoo-region">
-        
         <router-link to="">
             <span class="text_overflow yingmoo-region-word">{{current_city}}</span>
             <svg-icon icon-class="xia" />
