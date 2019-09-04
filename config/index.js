@@ -10,11 +10,26 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/new-api': {
+        target: [process.env.VUE_APP_NEW_API],
+        changeOrigin: true,
+        pathRewrite: {
+          '^/new-api': ''
+        }
+      },
+      '/low-api': {
+        target: [process.env.VUE_APP_LOW_API],
+        changeOrigin: true,
+        pathRewrite: {
+          '^/low-api': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    host: '172.16.10.106', // can be overwritten by process.env.HOST
+    port: 5393, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
